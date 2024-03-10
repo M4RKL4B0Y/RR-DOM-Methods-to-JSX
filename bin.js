@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 const spawn = require('cross-spawn')
-const open = require('open')
+const open = import('open')
 const { exec } = require('child_process')
 exec('npx babel ./src --out-dir=./dist', () => {
     spawn('npx', [ 'babel', './src', '--out-dir=./dist', '--watch' ], { stdio: 'inherit' });
